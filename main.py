@@ -1,6 +1,6 @@
 class Library:
     def __init__(self, name, book_list):
-        self.bookList = book_list  # Renamed parameter from 'list' to 'book_list'
+        self.bookList = book_list 
         self.name = name
         self.lendDict = {}
 
@@ -11,10 +11,10 @@ class Library:
 
     def lendBook(self, user, book):
         if book not in self.lendDict.keys():
-            self.lendDict[book] = user  # Store user as value for book key
+            self.lendDict[book] = user 
             print("Lender book database has been updated. You can take the book now.")
         else:
-            print("Sorry, the book has been lent to someone else.", self.lendDict[book])  # Show who has the book
+            print("Sorry, the book has been lent to someone else.", self.lendDict[book]) 
 
     def addBook(self, book):
         self.bookList.append(book)
